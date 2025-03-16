@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f8f3d9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@ body {
 
 /* Login Container */
 .login-container {
-  background: white;
+  background: #ebe5c2;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -41,46 +41,52 @@ body {
   width: 90%;
   padding: 10px;
   margin: 7px 0;
+  background-color: #f8f3d9;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, 
+  box-shadow 0.3s ease-in-out;
   font-size: 16px;
 }
 .input-field2 {
   width: 90%;
   padding: 10px;
   margin: 7px 0;
+  background-color: #f8f3d9;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, 
+  box-shadow 0.3s ease-in-out;
   font-size: 16px;
 }
 .input-field3 {
   width: 96%;
   padding: 10px;
   margin: 10px 0;
+  background-color: #f8f3d9;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, 
+  box-shadow 0.3s ease-in-out;
   font-size: 16px;
 }
 
 .input-field1:focus {
-  border-color: #007bff;
+  border-color: #b9b28a;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px #615b39;
 }
 
 .input-field2:focus {
-  border-color: #007bff;
+  border-color: #b9b28a;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px #615b39;
 }
 
 .input-field3:focus {
-  border-color: #007bff;
+  border-color: #b9b28a;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px #615b39;
 }
 
 /* Labels */
@@ -107,9 +113,9 @@ select {
 }
 
 select:focus {
-  border-color: #007bff;
+  border-color: #968f75;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px #615b39;
 }
 
 /* Login Button */
@@ -117,18 +123,19 @@ select:focus {
   width: 100%;
   padding: 12px;
   margin-bottom: 5px;
-  background: #007bff;
+  background: #504b38;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 15px;
-  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: background 0.3s ease-in-out, 
+  transform 0.2s ease-in-out;
 }
 
 .button-login:hover {
-  background: #0056b3;
+  background: #221f14;
   transform: scale(1.05);
 }
 
@@ -143,7 +150,7 @@ button{
   cursor: pointer;
 }
 .navbar{
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
@@ -160,8 +167,10 @@ button{
   overflow: visible;
 }
 .dropdown-btn {
-  background: transparent;
-  border: 2px solid white;
+  background: blue;
+  border: 7px solid white;
+  display: block;
+  margin: 10px;
   padding: 8px 15px;
   color: black;
   border-radius: 5px;
@@ -329,26 +338,26 @@ button{
   max-width: 500px;
   margin: auto;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #f1edd5;
   border-radius: 10px;
   box-shadow: 0 4 6 rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 .Dash-title{
-  color: #333;
+  color: #363636;
   font-size: 28px;
   margin-bottom: 10px;
 }
 .dash-welcome{
   font-size: 18px;
-  color: #555;
+  color: #414141;
 }
 .username{
   font-weight: bold;
-  color: #007bff;
+  color: #363532;
 }
 .dashboard-content{
-  background-color: white;
+  background-color: #c4bd9a4b;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2 4 rgba(0, 0, 0, 0.1);

@@ -13,7 +13,7 @@ interface NavbarProps{
 }
 
 const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
-    const [dropdown, setDropdown] = useState(true);
+    const [dropdown, setDropdown] = useState(false);
     
    // console.log(useAuth());
     if (!user) return null;
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
             </div>
             <div className="navbar-right">
                 <button className="dropdown-btn" onClick={() => setDropdown(!dropdown)}>Menu</button>
-                {user.isAuthenticated && (
+                {dropdown && (
                     <ul className="dropdown-menu">
                         <li>
                             <Link to="/dashboard">Dashboard</Link>
