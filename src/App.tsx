@@ -27,7 +27,9 @@ const App: React.FC = () => {
                     <Route path="/profile" element={
                         <ProtectedRoute>
                             <>
-                                <Navbar />
+                                <Navbar user={null} logout={function (): void{
+throw new Error ("Function not implemented.");
+}}/>
                                 <Profile />
                             </>
                         </ProtectedRoute>} 
@@ -35,7 +37,9 @@ const App: React.FC = () => {
                     <Route path="/settings" element={
                         <AdminRoute>
                             <>
-                                <Navbar />
+                                <Navbar user={null} logout={function (): void{
+throw new Error ("Function not implemented.");
+}}/>
                                 <Settings />
                             </>
                         </AdminRoute>} 
