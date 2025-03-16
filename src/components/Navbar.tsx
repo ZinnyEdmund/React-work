@@ -12,7 +12,7 @@ interface NavbarProps{
 }
 
 const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
-    const [dropdown, setDropdown] = useState(false);
+    const [dropdown, setDropdown] = useState(true);
     if (!user) return null;
 
     return (
