@@ -19,7 +19,9 @@ const App: React.FC = () => {
                     <Route path="/dashboard" element={
                         <ProtectedRoute>
                             <>
-                                <Navbar />
+                                <Navbar user={null} logout={function (): void{
+throw new Error ("Function not implemented.");
+}}/>
                                 <Dashboard />
                             </>
                         </ProtectedRoute>} 
