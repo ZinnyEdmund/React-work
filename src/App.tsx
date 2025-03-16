@@ -19,9 +19,9 @@ const App: React.FC = () => {
                     <Route path="/dashboard" element={
                         <ProtectedRoute>
                             <>
-                                <Navbar user={null} logout={function (): void {
+                            <Navbar user={{ username: "admin", role: "Admin", isAuthenticated: true }} logout={function (): void {
                                     throw new Error("Function not implemented.");
-                                } } />
+                                } } email={""} />
                                 <Dashboard />
                             </>
                         </ProtectedRoute>} 
@@ -29,9 +29,9 @@ const App: React.FC = () => {
                     <Route path="/profile" element={
                         <ProtectedRoute>
                             <>
-                                <Navbar user={null} logout={function (): void {
+                            <Navbar user={{ username: "admin", role: "Admin", isAuthenticated: true }} logout={function (): void {
                                     throw new Error("Function not implemented.");
-                                } } />
+                                } } email={""} />
                                 <Profile />
                             </>
                         </ProtectedRoute>} 
@@ -39,9 +39,9 @@ const App: React.FC = () => {
                     <Route path="/settings" element={
                         <AdminRoute>
                             <>
-                                <Navbar user={null} logout={function (): void {
+                                <Navbar user={{ username: "admin", role: "Admin", isAuthenticated: true }} logout={function (): void {
                                     throw new Error("Function not implemented.");
-                                } } />
+                                } } email={""} />
                                 <Settings />
                             </>
                         </AdminRoute>} 

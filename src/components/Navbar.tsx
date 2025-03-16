@@ -8,15 +8,19 @@ interface User{
     isAuthenticated: boolean;
 }
 interface NavbarProps{
-    user: User | null;
+    user: User ;
+    email: string;
     logout: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
     const [dropdown, setDropdown] = useState(false);
     
+    console.log("Rendering Navbar component");
+    console.log("User Data:", user)
+
    // console.log(useAuth());
-    if (!user) return null;
+    if (!user) return null;// Ensure user is not null before rendering
 
     return (
         <nav className="navbar">
