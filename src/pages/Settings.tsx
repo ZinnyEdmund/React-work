@@ -39,6 +39,7 @@ const Settings: React.FC = () => {
                         <button className="setting-btn">Enable</button></li>
                     <li>Language:  
                         <select  className="Settings-dropdown">
+                            <option value="none" disabled>Select a Language</option>
                             <option value="en">English</option>
                             <option value="es">Spanish</option>
                             <option value="fr">French</option>
