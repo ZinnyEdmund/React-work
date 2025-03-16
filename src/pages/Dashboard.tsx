@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
     return (
         <div className="dashboard-container">
             <h1 className="Dash-title">Dashboard</h1>
-            <p className="dash-welcome">Welcome back, <span className="username">{user.username}!</span></p>
+            <p className="dash-welcome">Hello <span className="username">{user.username}!</span></p>
 
             <div className="dashboard-content">
                 {user.role === "Admin" && <p className="dash-role">🔧 Here are your admin controls.</p>}

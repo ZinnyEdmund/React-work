@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"
-//import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 interface User{
     username: string;
@@ -8,18 +8,18 @@ interface User{
     isAuthenticated: boolean;
 }
 interface NavbarProps{
-    user: User ;
+    user: User  | null;
     email: string;
     logout: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
+const Navbar: React.FC<NavbarProps> = ({ user }) => {
     const [dropdown, setDropdown] = useState(false);
-    
+    const { logout: authLogout } = useAuth();
     console.log("Rendering Navbar component");
     console.log("User Data:", user)
 
-   // console.log(useAuth());
+   console.log(useAuth());
     if (!user) return null;// Ensure user is not null before rendering
 
     return (
@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
             <div className="navbar-left">
               
             <span>
-                <strong>Welcome back, {user.username} {user.role}</strong>
+                <p className="tags">Welcome back</p>
             </span>
             </div>
             <div className="navbar-right">
@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
                             <Link to="/settings">Settings</Link>
                         </li>
                         <li>
-                            <button onClick={logout}>Logout</button>
+                            <button onClick={authLogout}>Logout</button>
                         </li>
                     </ul>
                 )}

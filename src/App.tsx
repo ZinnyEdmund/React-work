@@ -29,7 +29,7 @@ const App: React.FC = () => {
                     <Route path="/profile" element={
                         <ProtectedRoute>
                             <>
-                            <Navbar user={{ username: "admin", role: "Admin", isAuthenticated: true }} logout={function (): void {
+                            <Navbar user={{ username: "admin" , role: "Admin", isAuthenticated: true }} logout={function (): void {
                                     throw new Error("Function not implemented.");
                                 } } email={""} />
                                 <Profile />

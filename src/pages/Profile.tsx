@@ -29,7 +29,6 @@ const Profile: React.FC = () => {
             <div className="profile-actions">
                 <button className="profile-button">Change Password</button>
                 <button className="profile-button">Edit</button>
-                <button className="profile-logout">Logout</button>
             </div>
         </div>
     );

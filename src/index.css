@@ -149,15 +149,18 @@ button{
   border: none;
   cursor: pointer;
 }
+.tags{
+  font-size: 2rem;
+}
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: linear-gradient(135deg, #2c3e50,#4ca1af);
+  background: linear-gradient(135deg, #504b38,#b9b28a);
   color: black;
-  font-size: 1.2rem;
   font-family: "Broadway", sans-serif;
+  border-radius: 10px;
 }
 .navbar-left{
   font-size: 18px;
@@ -174,6 +177,8 @@ button{
   border: 2px solid #968f75;
   display: block;
   padding: 8px 15px;
+  margin: 10px;
+  margin-left: 40px;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -229,16 +234,20 @@ button{
   background: darkred;
 }
 .setting-container{
-  max-width: 600px;
+  max-width: 350px;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+  background-color: #f5f0d7;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.setting-container p{
+  text-align: center;
+  font-weight: 500;
 }
 .sctH1{
-  color: #555;
-  font-size: 2.5rem;
+  color: #272626;
+  font-size: 1.5rem;
   text-align: center;
 }
 .settings-section{
@@ -246,11 +255,12 @@ button{
   padding: 10px;
   background: #9c9164;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .settings-section ul{
   list-style-type: none;
   padding: 0;
+  margin: 20px;
 }
 .settings-section li{
   padding: 5px 0;
@@ -258,6 +268,7 @@ button{
 .setting-btn{
   background: #504b38;
   color: white;
+  font-size: medium;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -272,10 +283,12 @@ button{
   padding: 5px;
   margin-left: 10px;
   border-radius: 5x;
+  background-color: #ebe5c2;
 }
 .settings-footer{
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
+  font-weight: bold;
 }
 .settings-footer a{
   text-decoration: none;
@@ -295,23 +308,26 @@ button{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .profile-title{
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #2b2a2a;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .profile-name{
-  font-size: 1.5rem;
-  color: #2b2a2a;
+  font-size: 1.1rem;
+  color: #2c2b2b;
   margin-bottom: 10px;
 }
 .profile-email, .profile-role{
   font-size: 1.2rem;
-  color: #444343;
+  color: #242323;
   padding: 10px;
   margin-bottom: 10px;
 }
 .profile-actions{
-  margin: 20px;
+  margin: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 .profile-button{
   background: #504b38;
@@ -326,18 +342,6 @@ button{
 .profile-button:hover {
   background: #221f14;
   transform: scale(1.05);
-}
-.profile-logout{
-  background: red;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.profile-logout:hover {
-  background: darkred;
 }
 .dashboard-container{
   max-width: 500px;
