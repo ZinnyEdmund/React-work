@@ -154,7 +154,7 @@ button{
 }
 .navbar{
   min-width: 100px;
-  margin: 20px;
+  margin: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
