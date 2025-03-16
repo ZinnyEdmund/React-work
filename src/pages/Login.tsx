@@ -27,7 +27,7 @@ const Login: React.FC = () => {
                 <input 
                     type="text" 
                     placeholder="Username" 
-                    className='input-field' 
+                    className='input-field1' 
                     required
                     value={username} 
                     onChange={(e) => setUsername(e.target.value)} 
@@ -38,7 +38,7 @@ const Login: React.FC = () => {
                 <input 
                     type="email" 
                     placeholder="Email" 
-                    className='input-field' 
+                    className='input-field2' 
                     required
                     value={email} 
                     onChange={(e) => setEmail(e.target.value)} 
@@ -47,7 +47,7 @@ const Login: React.FC = () => {
 
                 <label className='label'>Role:</label>
                 <select 
-                    className='input-field'
+                    className='input-field3'
                     value={role} 
                     onChange={(e) => {
                         const selectedRole = e.target.value as "Admin" | "Editor" | "Viewer";

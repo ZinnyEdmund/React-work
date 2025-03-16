@@ -37,8 +37,26 @@ body {
   animation: slideDown 0.6s ease-in-out;
 }
 /* Input Fields */
-.input-field {
-  width: 100%;
+.input-field1 {
+  width: 90%;
+  padding: 10px;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 16px;
+}
+.input-field2 {
+  width: 90%;
+  padding: 10px;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 16px;
+}
+.input-field3 {
+  width: 96%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -47,7 +65,19 @@ body {
   font-size: 16px;
 }
 
-.input-field:focus {
+.input-field1:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-field2:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-field3:focus {
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
@@ -86,6 +116,7 @@ select:focus {
 .button-login {
   width: 100%;
   padding: 12px;
+  margin-bottom: 5px;
   background: #007bff;
   color: white;
   border: none;
@@ -104,13 +135,20 @@ select:focus {
 .button-login:active {
   animation: bounce 0.4s;
 }
+button{
+  display: block !important;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   background: linear-gradient(135deg, #2c3e50,#4ca1af);
-  color: white;
+  color: black;
   font-size: 1.2rem;
   font-family: "Broadway", sans-serif;
 }
@@ -119,6 +157,7 @@ select:focus {
 }
 .navbar-right{
   position: relative;
+  overflow: visible;
 }
 .dropdown-btn {
   background: transparent;
@@ -135,8 +174,8 @@ select:focus {
 }
 .dropdown-menu{
   position: absolute;
-  right: 0;
-  background: white;
+  display: block;
+  background: blue;
   color: #2c3e50;
   box-shadow: 0 4 10 rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -177,7 +216,151 @@ select:focus {
 .logout-btn:hover {
   background: darkred;
 }
-
+.setting-container{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.sctH1{
+  color: #555;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.settings-section{
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.settings-section ul{
+  list-style-type: none;
+  padding: 0;
+}
+.settings-section li{
+  padding: 5px 0;
+}
+.setting-btn{
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.setting-btn:hover {
+  background: #0056b3;
+}
+.Settings-dropdown{
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5x;
+}
+.settings-footer{
+  margin-top: 20px;
+  text-align: center;
+}
+.settings-footer a{
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.settings-footer a:hover{
+  text-decoration: underline;
+}
+.profile-container{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-title{
+  font-size: 2.5rem;
+  color: #2b2a2a;
+  margin-bottom: 10px;
+}
+.profile-name{
+  font-size: 1.5rem;
+  color: #2b2a2a;
+  margin-bottom: 10px;
+}
+.profile-email, .profile-role{
+  font-size: 1.2rem;
+  color: #444343;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.profile-actions{
+  margin: 20px;
+}
+.profile-button{
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.profile-button:hover {
+  background: #0056b3;
+}
+.profile-logout{
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.profile-logout:hover {
+  background: darkred;
+}
+.dashboard-container{
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4 6 rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.Dash-title{
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.dash-welcome{
+  font-size: 18px;
+  color: #555;
+}
+.username{
+  font-weight: bold;
+  color: #007bff;
+}
+.dashboard-content{
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2 4 rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+.dash-role{
+  font-size: 16px;
+  color: #333;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 /* Responsive Design */
 @media (max-width: 400px) {
   .login-container {

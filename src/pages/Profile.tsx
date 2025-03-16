@@ -16,27 +16,23 @@ const Profile: React.FC = () => {
 
     // Redirect to login if not authenticated
     if (!user) {
-        return (
-    <div className="profile-container">
-      <h1 className="profile-title">My Profile</h1>
-      
-      <div className="profile-card">
-        <img
-          src="https://via.placeholder.com/150"
-          alt="Profile"
-          className="profile-avatar"
-        />
-        <h2 className="profile-name">{user.username}</h2>
-        <p className="profile-email"><strong>Email:</strong> {user.email}</p>
-        <p className="profile-role"><strong>Role:</strong> {user.role}</p>
-      </div>
+        return <Navigate to="/login" />;
+    }
 
-      <div className="profile-actions">
-        <button className="profile-btn">Edit Profile</button>
-        <button className="profile-btn logout">Logout</button>
-      </div>
-    </div>
-  );
+    return (
+        <div className="profile-container">
+            <h1 className="profile-title">Profile</h1>
+            <h2 className="profile-name"><strong>Username:</strong> {user.username}</h2>
+            <p className="profile-email"><strong>Email:</strong> {user.email}</p>
+            <p className="profile-role"><strong>Role:</strong> {user.role}</p>
+
+            <div className="profile-actions">
+                <button className="profile-button">Change Password</button>
+                <button className="profile-button">Edit</button>
+                <button className="profile-logout">Logout</button>
+            </div>
+        </div>
+    );
 };
 
 export default Profile;

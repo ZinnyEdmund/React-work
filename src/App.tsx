@@ -19,9 +19,9 @@ const App: React.FC = () => {
                     <Route path="/dashboard" element={
                         <ProtectedRoute>
                             <>
-                                <Navbar user={null} logout={function (): void{
-throw new Error ("Function not implemented.");
-}}/>
+                                <Navbar user={null} logout={function (): void {
+                                    throw new Error("Function not implemented.");
+                                } } />
                                 <Dashboard />
                             </>
                         </ProtectedRoute>} 
@@ -29,9 +29,9 @@ throw new Error ("Function not implemented.");
                     <Route path="/profile" element={
                         <ProtectedRoute>
                             <>
-                                <Navbar user={null} logout={function (): void{
-throw new Error ("Function not implemented.");
-}}/>
+                                <Navbar user={null} logout={function (): void {
+                                    throw new Error("Function not implemented.");
+                                } } />
                                 <Profile />
                             </>
                         </ProtectedRoute>} 
@@ -39,9 +39,9 @@ throw new Error ("Function not implemented.");
                     <Route path="/settings" element={
                         <AdminRoute>
                             <>
-                                <Navbar user={null} logout={function (): void{
-throw new Error ("Function not implemented.");
-}}/>
+                                <Navbar user={null} logout={function (): void {
+                                    throw new Error("Function not implemented.");
+                                } } />
                                 <Settings />
                             </>
                         </AdminRoute>} 

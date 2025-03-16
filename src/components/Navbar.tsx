@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"
+//import { useAuth } from "../context/AuthContext";
 
 interface User{
     username: string;
@@ -13,19 +14,21 @@ interface NavbarProps{
 
 const Navbar: React.FC<NavbarProps> = ({ user, logout }) => {
     const [dropdown, setDropdown] = useState(true);
+    
+   // console.log(useAuth());
     if (!user) return null;
 
     return (
         <nav className="navbar">
             <div className="navbar-left">
-                {/* Display the user's name and role */}
+              
             <span>
                 <strong>Welcome back, {user.username} {user.role}</strong>
             </span>
             </div>
             <div className="navbar-right">
                 <button className="dropdown-btn" onClick={() => setDropdown(!dropdown)}>Menu</button>
-                {dropdown && (
+                {user.isAuthenticated && (
                     <ul className="dropdown-menu">
                         <li>
                             <Link to="/dashboard">Dashboard</Link>

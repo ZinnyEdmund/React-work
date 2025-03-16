@@ -18,13 +18,16 @@ const Dashboard: React.FC = () => {
     if (!user) return <Navigate to="/login" />;
 
     return (
-        <div>
-            <h1>Dashboard</h1>
-            <p>Welcome, {user.username}!</p>
-            {user.role === "Admin" && <p>Here are your admin controls.</p>}
-            {user.role === "Editor" && <p>Here is your content panel.</p>}
-            {user.role === "Viewer" && <p>Here are your reports.</p>}
-        </div>
+        <div className="dashboard-container">
+            <h1 className="Dash-title">Dashboard</h1>
+            <p className="dash-welcome">Welcome back, <span className="username">{user.username}!</span></p>
+
+            <div className="dashboard-content">
+                {user.role === "Admin" && <p className="dash-role">🔧 Here are your admin controls.</p>}
+                {user.role === "Editor" && <p className="dash-role">📝 Here is your content panel.</p>}
+                {user.role === "Viewer" && <p className="dash-role">📊 Here are your reports.</p>}
+            </div>
+            </div>
     );
 };
 
